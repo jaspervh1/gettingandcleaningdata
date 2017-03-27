@@ -51,3 +51,8 @@ data<-data%>%
 data2<-data%>%
     group_by(subject,activity,kind,moment,dimension)%>%
     summarize(average=mean(value))
+
+
+#write the data to txt format
+write.csv(data,file="AllData.txt",row.names=FALSE)
+write.csv(data,file="AverageData.txt",row.names=FALSE)
